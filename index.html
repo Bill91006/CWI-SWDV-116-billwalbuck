@@ -11,19 +11,62 @@
 </head>
 
 <body>
-   <header>
-      <h1>Bill's Car Rentals</h1>
-   </header>
-   <nav>
-      <a href="index.html">Home</a>
-      <a href="cars.html">Cars</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-   </nav>
+   <section class="hero" aria-labelledby="site-title">
+      <div class="hero-top">
+         <header>
+            <h1 id="site-title">Bill's Car Rentals</h1>
+         </header>
+         <nav aria-label="Main navigation">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="cars.html">Cars</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+         </nav>
+      </div>
+   </section>
 
    <main>
-      <p>Rent A Car Today</p>
+      <section class="featured-cars" aria-labelledby="featured-title">
+         <h2 id="featured-title">Featured Cars</h2>
+         <div class="car-list">
+            <article class="car-card">
+               <img src="images/car_1.jpg" alt="Red hatchback driving along a tree-lined road" width="500" height="400" loading="lazy">
+               <h3>Car Model 1</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </article>
+            <article class="car-card">
+               <img src="images/car_2.jpg" alt="Silver sports car on a winding road" width="500" height="400" loading="lazy">
+               <h3>Car Model 2</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </article>
+            <article class="car-card">
+               <img src="images/car_3.jpg" alt="White sports coupe parked near a bridge" width="500" height="400" loading="lazy">
+               <h3>Car Model 3</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </article>
+            <article class="car-card">
+               <img src="images/car_4.jpg" alt="White SUV parked outside a building" width="500" height="400" loading="lazy">
+               <h3>Car Model 4</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </article>
+            <article class="car-card">
+               <img src="images/car_5.jpg" alt="White sports coupe driving through a forest" width="500" height="400" loading="lazy">
+               <h3>Car Model 5</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </article>
+            <article class="car-card">
+               <img src="images/car_6.jpg" alt="Blue sports coupe with orange wheels" width="500" height="400" loading="lazy">
+               <h3>Car Model 6</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </article>
+            <article class="car-card">
+               <img src="images/car_7.jpg" alt="Black sports coupe parked at a racetrack" width="500" height="400" loading="lazy">
+               <h3>Car Model 7</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </article>
+         </div>
+      </section>
    </main>
    <footer>
       <p>&copy; 2026</p>
