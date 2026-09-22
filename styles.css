@@ -3,6 +3,7 @@ body {
 }
 
 nav a {
+   white-space: nowrap;
    color: rgba(0, 0, 0, 0.7);
    text-decoration: none;
 }
@@ -52,7 +53,7 @@ body {
 
 .hero nav {
    display: flex;
-   flex-wrap: wrap;
+   flex-wrap: nowrap;
    justify-content: center;
    gap: 1.25rem;
 }
