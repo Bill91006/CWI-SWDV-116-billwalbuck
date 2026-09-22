@@ -31,7 +31,7 @@ body {
 .hero {
    min-height: 660px;
    background-color: #f5f5f5;
-   background-image: url("images/hero_1.jpg");
+   background-image: url("images/responsive/hero_1-600.jpg");
    background-size: cover;
    background-position: center;
 }
@@ -49,6 +49,7 @@ body {
 .hero h1 {
    margin: 0;
    font-size: 1.75rem;
+   font-size: clamp(1.5rem, 1rem + 1.5vw, 2rem);
 }
 
 .hero nav {
@@ -60,6 +61,7 @@ body {
 
 .hero nav a {
    font-size: 0.875rem;
+   font-size: clamp(0.8rem, 0.7rem + 0.3vw, 0.875rem);
 }
 
 nav a:focus-visible {
@@ -99,6 +101,10 @@ nav a:focus-visible {
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.car-card picture {
+   display: block;
+}
+
 .car-card img {
    display: block;
    width: 100%;
@@ -134,12 +140,8 @@ footer {
       text-align: center;
    }
 
-   .hero h1 {
-      font-size: 2rem;
-   }
-
    .hero nav {
-      gap: 16px;
+      gap: clamp(8px, 2vw, 16px);
    }
 
    .car-list {
@@ -151,5 +153,81 @@ footer {
       flex: 0 1 auto;
       width: 260px;
       max-width: 100%;
+   }
+}
+
+/* Stack the heading above the single-row menu on tablets, too. */
+@media (min-width: 601px) and (max-width: 767px) {
+   .hero-top {
+      flex-direction: column;
+      text-align: center;
+   }
+}
+
+/* Mobile-first JPEG backgrounds for browsers without image-set support. */
+@media (min-width: 600px) {
+   .hero {
+      background-image: url("images/responsive/hero_1-768.jpg");
+   }
+}
+
+@media (min-width: 768px) {
+   .hero {
+      background-image: url("images/responsive/hero_1-992.jpg");
+   }
+}
+
+@media (min-width: 992px) {
+   .hero {
+      background-image: url("images/responsive/hero_1-1200.jpg");
+   }
+}
+
+@media (min-width: 1200px) {
+   .hero {
+      background-image: url("images/responsive/hero_1-1920.jpg");
+   }
+}
+
+/* @supports tests image-set syntax, not whether a URL can decode WebP.
+   Typed candidates let the browser choose WebP or the JPEG fallback. */
+@supports (background-image: image-set(url("images/responsive/hero_1-600.webp") type("image/webp"))) {
+   .hero {
+      background-image: image-set(
+         url("images/responsive/hero_1-600.webp") type("image/webp"),
+         url("images/responsive/hero_1-600.jpg") type("image/jpeg")
+      );
+   }
+   @media (min-width: 600px) {
+      .hero {
+         background-image: image-set(
+            url("images/responsive/hero_1-768.webp") type("image/webp"),
+            url("images/responsive/hero_1-768.jpg") type("image/jpeg")
+         );
+      }
+   }
+   @media (min-width: 768px) {
+      .hero {
+         background-image: image-set(
+            url("images/responsive/hero_1-992.webp") type("image/webp"),
+            url("images/responsive/hero_1-992.jpg") type("image/jpeg")
+         );
+      }
+   }
+   @media (min-width: 992px) {
+      .hero {
+         background-image: image-set(
+            url("images/responsive/hero_1-1200.webp") type("image/webp"),
+            url("images/responsive/hero_1-1200.jpg") type("image/jpeg")
+         );
+      }
+   }
+   @media (min-width: 1200px) {
+      .hero {
+         background-image: image-set(
+            url("images/responsive/hero_1-1920.webp") type("image/webp"),
+            url("images/responsive/hero_1-1920.jpg") type("image/jpeg")
+         );
+      }
    }
 }
