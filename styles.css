@@ -3,6 +3,7 @@ body {
 }
 
 nav a {
+   white-space: nowrap;
    color: rgba(0, 0, 0, 0.7);
    text-decoration: none;
 }
@@ -28,7 +29,7 @@ body {
 .hero {
    min-height: 660px;
    background-color: #f5f5f5;
-   background-image: url("images/hero_1.jpg");
+   background-image: url("images/hero_1.webp");
    background-size: cover;
    background-position: center;
 }
@@ -50,7 +51,7 @@ body {
 
 .hero nav {
    display: flex;
-   flex-wrap: wrap;
+   flex-wrap: nowrap;
    justify-content: center;
    gap: 1.25rem;
 }
