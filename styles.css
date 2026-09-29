@@ -157,7 +157,6 @@ footer {
    }
 }
 
-/* Stack the heading above the single-row menu on tablets, too. */
 @media (min-width: 601px) and (max-width: 767px) {
    .hero-top {
       flex-direction: column;
@@ -165,7 +164,6 @@ footer {
    }
 }
 
-/* Mobile-first JPEG backgrounds for browsers without image-set support. */
 @media (min-width: 600px) {
    .hero {
       background-image: url("images/responsive/hero_1-768.jpg");
@@ -190,8 +188,6 @@ footer {
    }
 }
 
-/* @supports tests image-set syntax, not whether a URL can decode WebP.
-   Typed candidates let the browser choose WebP or the JPEG fallback. */
 @supports (background-image: image-set(url("images/responsive/hero_1-600.webp") type("image/webp"))) {
    .hero {
       background-image: image-set(
