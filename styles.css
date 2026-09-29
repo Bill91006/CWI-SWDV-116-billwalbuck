@@ -157,7 +157,6 @@ footer {
    }
 }
 
-/* Stack the heading above the single-row menu on tablets, too. */
 @media (min-width: 601px) and (max-width: 767px) {
    .hero-top {
       flex-direction: column;
@@ -165,7 +164,6 @@ footer {
    }
 }
 
-/* Mobile-first JPEG backgrounds for browsers without image-set support. */
 @media (min-width: 600px) {
    .hero {
       background-image: url("images/responsive/hero_1-768.jpg");
@@ -190,8 +188,6 @@ footer {
    }
 }
 
-/* @supports tests image-set syntax, not whether a URL can decode WebP.
-   Typed candidates let the browser choose WebP or the JPEG fallback. */
 @supports (background-image: image-set(url("images/responsive/hero_1-600.webp") type("image/webp"))) {
    .hero {
       background-image: image-set(
@@ -233,7 +229,6 @@ footer {
    }
 }
 
-/* Shared header and content styling on every page. */
 .site-header {
    background-color: rgba(245, 245, 245, 0.96);
 }
@@ -293,7 +288,6 @@ footer {
    background-color: #f5f5f5;
 }
 
-/* Keep the desktop menu in one row; stack its heading on tablets. */
 @media (min-width: 601px) and (max-width: 991px) {
    .hero-top {
       flex-direction: column;
@@ -302,7 +296,6 @@ footer {
    }
 }
 
-/* Mobile menus start hidden and open vertically when the menu icon is clicked. */
 @media (max-width: 600px) {
    .hero-top {
       position: relative;
@@ -321,7 +314,6 @@ footer {
       margin-left: auto;
    }
 
-   /* Keep the checkbox keyboard-accessible while the label is the visible toggle. */
    .nav-check {
       display: block;
       position: absolute;
@@ -366,4 +358,16 @@ footer {
    .site-nav a {
       padding: 12px 16px;
    }
+}
+
+.nav-toggle .fa-times {
+   display: none;
+}
+
+.nav-check:checked + .nav-toggle .fa-bars {
+   display: none;
+}
+
+.nav-check:checked + .nav-toggle .fa-times {
+   display: inline-block;
 }
