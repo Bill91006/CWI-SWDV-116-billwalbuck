@@ -7,13 +7,13 @@ body {
    font-family: Arial, Helvetica, sans-serif;
 }
 
-nav a {
+.nav-link {
    white-space: nowrap;
    color: rgba(0, 0, 0, 0.7);
    text-decoration: none;
 }
 
-nav a:hover {
+.nav-link:hover {
    color: cadetblue;
    text-decoration: underline;
 }
@@ -62,12 +62,12 @@ body {
    gap: 1.25rem;
 }
 
-.site-nav a {
+.site-nav .nav-link {
    font-size: 0.875rem;
    font-size: clamp(0.8rem, 0.7rem + 0.3vw, 0.875rem);
 }
 
-nav a:focus-visible {
+.nav-link:focus-visible {
    color: cadetblue;
    text-decoration: underline;
    outline: 2px solid cadetblue;
@@ -238,12 +238,12 @@ footer {
    text-decoration: none;
 }
 
-.site-nav a {
+.site-nav .nav-link {
    display: block;
    padding: 12px 0;
 }
 
-.site-nav a[aria-current="page"] {
+.site-nav .nav-link[aria-current="page"] {
    font-weight: bold;
    text-decoration: underline;
 }
@@ -355,7 +355,7 @@ footer {
       display: flex;
    }
 
-   .site-nav a {
+   .site-nav .nav-link {
       padding: 12px 16px;
    }
 }
