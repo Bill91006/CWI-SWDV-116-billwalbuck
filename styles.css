@@ -223,6 +223,18 @@ footer {
       background-position: left center;
    }
 
+   .hero-search {
+      padding: 22px;
+   }
+
+   .rental-search-form {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+   }
+
+   .rental-search-form button {
+      grid-column: 1 / -1;
+   }
+
    .hero-top {
       flex-direction: column;
       gap: 28px;
@@ -319,6 +331,10 @@ footer {
 }
 
 .site-header {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
    background-color: rgba(245, 245, 245, 0.96);
 }
 
