@@ -32,13 +32,18 @@
       </div>
    </header>
 
-   <main class="page-content">
-      <p>Cars</p>
+   <main class="featured-cars" aria-labelledby="cars-title">
+      <h2 id="cars-title">Available Cars</h2>
+      <div class="car-list"></div>
    </main>
    <footer>
       <p>&copy; 2026 Bill's Car Rentals</p>
    </footer>
 
+   <script src="main.js"></script>
+   <script>
+      document.addEventListener("DOMContentLoaded", listCars);
+   </script>
 </body>
 
 </html>
